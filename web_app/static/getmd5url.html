@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- saved from url=(0127)http://js.t.sinajs.cn/t5/pack/static/getmd5url.html?project=pack&file=module.js&handler=WBWidget_152446847858007004026894650497 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>WBWidget: getMD5Url</title>
+<link rel="stylesheet" href="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.css"><script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script></head>
+<body>
+<!-- 微博: 用于获取最新的文件版本 -->
+<script>
+
+var   query            = formateQuery(location.search)
+	, requestProject   = query['project']
+	, requestFile      = query['file']
+	, requestHandler   = query['handler'] || 'WBWidget_undefined'
+	, urlPath          = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//' + location.host + '/t5/' + requestProject + '/js/'
+	, jsPath           = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//js.t.sinajs.cn/t5/' + requestProject + '/js/'
+	, mapUrl           = urlPath + 'md5_mapping_file.json';
+
+function formateQuery (search /**/, ret, one) {
+	ret    = {};
+	search = location.search.replace('?', '').split('&');
+	while( one = search.shift() ){
+		one           = one.split('=')
+		ret[ one[0] ] = decodeURIComponent( one[1] );
+	}
+	return ret;
+}
+
+function getJson(url, callback /**/, r){
+	
+	r = window.ActiveXObject ? new ActiveXObject('Microsoft.XMLHTTP') : new XMLHttpRequest();
+	r.open('GET', url, true);
+	r.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');	
+	r.onreadystatechange = readystatechange;
+	r.send();
+
+	function readystatechange () {
+		if (r.readyState === 4 && r.status === 200 && callback) {			
+			eval( 'callback(' + r.responseText  + ')' );
+		}
+	}
+	return url;
+}
+
+function getMD5Url(project, file, callback){	
+	return getJson(mapUrl, formate);
+	
+	function formate(json){
+		callback && callback( jsPath + json[ file ] );
+	}
+}
+
+function connect (data, handler){
+	data = '{data: \'' + data.toString() + '\', handler: \'' + handler + '\'}';
+	try{
+		'postMessage' in window
+			? parent.postMessage(data, '*')
+			: window.navigator[handler]( {'data': data} );
+	}catch(e){}
+}
+
+function buildConnect (callback, handler) {
+	if('postMessage' in window){
+		'addEventListener' in window 
+			? window.addEventListener('message',   listerner, false)
+			: window.attachEvent     ('onmessage', listerner)
+	}else{
+		window.navigator[handler] = listerner
+	}
+	
+	function removeListerner(){
+		if('postMessage' in window){
+			'addEventListener' in window 
+				? window.removeEventListener('message',   listerner, false)
+				: window.detachEvent        ('onmessage', listerner)
+		}else{
+			delete window.navigator[handler];
+		}
+	}
+
+	function listerner (evt){
+		var json;
+		try{			
+			eval('json=' + evt.data);
+			if(handler === json.handler){
+				callback && callback( json.data );
+				removeListerner();
+			}
+		}catch(e){}
+	}
+}
+
+window === self   && 
+window === parent && 
+buildConnect(
+	function(data){ document.body.appendChild( document.createTextNode(data) ) }, 
+	requestHandler
+);
+
+requestProject && 
+requestFile    &&
+getMD5Url( 
+	requestProject, 
+	requestFile, 
+	function(src){ connect(src, requestHandler) }
+);
+
+</script>
+
+<div id="selenium-highlight"></div></body></html>

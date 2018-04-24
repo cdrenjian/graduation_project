@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0041)http://s.weibo.com/?sudaref=www.baidu.com -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-Frame-Options" content="DENY ">
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<title>微博搜索 - 微博</title>
+<noscript>
+&lt;meta http-equiv="refresh" content="0;url=/home?nojs=1"&gt;
+</noscript>
+<link href="{{url_for('static', filename='common.css')}}" type="text/css" rel="stylesheet" charset="utf-8">
+ 
+ <link href="{{url_for('static', filename='index4.css')}}" type="text/css" rel="stylesheet" charset="utf-8">
+ <!-- 非BP的样式 -->
+<link href="{{url_for('static', filename='search_directarea.css')}}" type="text/css" rel="stylesheet" charset="utf-8">
+<link href="{{url_for('static', filename='general.css')}}" type="text/css" rel="stylesheet" charset="utf-8">
+<link href="{{url_for('static', filename='hot_ranktit.css')}}" type="text/css" rel="stylesheet" charset="utf-8">
+<script type="text/javascript" charset="utf-8" async="" src="{{url_for('static', filename='suda.js')}}"></script><script type="text/javascript">
+ var $CONFIG = {};
+  $CONFIG['islogin'] = '0';
+ $CONFIG['uid'] = '0';
+ $CONFIG['entry'] = 'weisousuo';
+  $CONFIG['setCover'] = 1; //ie6hack
+ $CONFIG['version'] = '20180420120000';
+ $CONFIG['bigpipe'] = 'false';
+ $CONFIG['timeDiff'] = (new Date() - 1524468478000);
+ $CONFIG['product'] = 'search';
+ $CONFIG['pageid'] = 'index';
+ $CONFIG['skin'] = '';
+ $CONFIG['lang'] = 'zh-cn';
+ $CONFIG['jsPath'] = '//js.t.sinajs.cn/t4/';
+ $CONFIG['cssPath'] = '//img.t.sinajs.cn/t4/';
+ $CONFIG['imgPath'] = '//img.t.sinajs.cn/t4/';
+ $CONFIG['servertime'] = 1524468478;
+ $CONFIG['ad_url_jump'] = '';
+  $CONFIG['$webim'] = 0; //1;
+ $CONFIG['mJsPath'] = ['https://js{n}.t.sinajs.cn/t4/', 1, 2];
+ $CONFIG['mCssPath'] = ['https://img{n}.t.sinajs.cn/t4/', 1, 2];
+ $CONFIG['s_domain'] = '//s.weibo.com';
+  </script><!--[if lte IE 8]>
+<link href="//img.t.sinajs.cn/t4/appstyle/searchV45/css_v6/pages/ie_bug.css?version=20180420120000" type="text/css" rel="stylesheet" charset="utf-8" />
+<![endif]-->
+<link href="{{url_for('static', filename='usually.css')}}" type="text/css" rel="stylesheet" charset="utf-8">
+<link href="{{url_for('static', filename='WB_h5video.css')}}" type="text/css" rel="stylesheet" charset="utf-8">
+<link href="{{url_for('static', filename='rela_person.css')}}" type="text/css" rel="stylesheet" charset="utf-8"><iframe width="0" height="0" src="static/getmd5url.html" style="position: absolute; left: -1000px; top: -1000px; display: none; height: 0px; width: 0px;"></iframe><link rel="Stylesheet" type="text/css" charset="utf-8" href="static/PCD_mplayer.css"><div style="position: absolute; top: -9999px; left: -9999px;"></div><link rel="Stylesheet" type="text/css" charset="utf-8" href="static/WB_outframe.css"><style></style><div style="position: absolute; top: -9999px;"><div id="js_style_css_module_global_WB_outframe"></div></div><link rel="stylesheet" href="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.css"><script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script><style></style></head>
+
+<body class="S_index ">
+<div class="S_wrap ">
+ <div id="weibo_top_public"><!--spec start-->    <!--顶部导航--> 
+    
+<!--spec end--></div>
+<link href="static/direct_weiguantuan.css" type="text/css" rel="stylesheet" charset="utf-8">
+ <!-- new usercard-->
+<script src="static/bootstrap.js"></script>
+
+<div class="S_main"> 
+ <div class="S_main_bg">  
+  <div class="index_logo">
+ <h1><a class="logo_img" href="javascript:void(0);">微博搜索</a><a href="javascript:void(0);" class="logo_app"></a></h1>
+  </div>  
+  <!--&lt;!&ndash; input box &ndash;&gt;-->
+  <!--<div class="search_head clearfix" id="pl_searchHead">-->
+ <!--<div class="search_head_formbox">-->
+  <!--<ul class="formbox_tab formbox_tab2 clearfix" node-type="searchItems">-->
+   <!--<li><a class="cur" href="javascript:void(0);" action-type="type" action-data="type=weibo" action_params="" suda-data="key=tblog_search_index&amp;value=index_weibo">输入用户主页或用户名</a></li>-->
+  <!--</ul>-->
+  <!--<div class="search_input clearfix" node-type="searchBar">-->
+   <!--<div class="search_input_wrap">-->
+    <!-- my form-->
+    <form method="POST"  class="searchBtn_box" action="/">
+    {{ form.hidden_tag() }}
+    {{ form.start_data.label }} : {{ form.start_data(size=200) }}
+    <input type="submit" class="searchBtn" value="开始爬取">
+</form>
+    <!--finish-->
+  <!--<div class="searchBtn_box"><a class="searchBtn" href="/" node-type="submit">开始爬取</a></div>-->
+  <div class="searchInp_box">
+   <div class="searchInp_auto">
+    <input type="text" class="searchInp_form" node-type="text" maxlength="40" autocomplete="off">
+   </div>
+  </div>
+   </div>
+  </div>
+ </div>
+   </div>
+  <!-- /input box -->
+   <!-- *************************************** -->
+ 
+ 
+ </div>
+</div>
+<div class="search_footer W_textb">
+  <div class="global_footer">
+ 
+  </div>
+ </div>
+  <div style="display:none;" id="pl_common_base"></div>
+</div>
+
+
+ <script src="static/searchIndex.js" type="text/javascript"></script>
+
+
+</div><div id="selenium-highlight"></div></body></html>

@@ -1,0 +1,339 @@
+[INFO][2018-04-17 11:55:25,961]Crawled 51 pages (at 1 pages/min), scraped 17 items (at 0 items/min)
+[INFO][2018-04-17 11:55:37,762]Reading start URLs from redis key 'keywords_spider:start_urls' (batch size: 16, encoding: utf-8
+[INFO][2018-04-17 11:55:37,926]Enabled downloader middlewares:
+['ineyes_crawler.middlewares.SubUserAgentMiddleware',
+ 'ineyes_crawler.middlewares.PhantomJSMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[INFO][2018-04-17 11:55:37,934]Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[INFO][2018-04-17 11:55:37,936]Enabled item pipelines:
+['ineyes_crawler.pipelines.IneyesCrawlerPipeline',
+ 'ineyes_crawler.pipelines.PubSubPipeline']
+[INFO][2018-04-17 11:55:37,936]Spider opened
+[INFO][2018-04-17 11:55:38,611]Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[INFO][2018-04-17 11:56:40,205]Crawled 4 pages (at 4 pages/min), scraped 0 items (at 0 items/min)
+[INFO][2018-04-17 11:57:50,211]Crawled 12 pages (at 8 pages/min), scraped 8 items (at 8 items/min)
+[INFO][2018-04-17 11:58:38,613]Crawled 17 pages (at 5 pages/min), scraped 14 items (at 6 items/min)
+[INFO][2018-04-17 11:59:52,685]Crawled 25 pages (at 8 pages/min), scraped 14 items (at 0 items/min)
+[ERROR][2018-04-17 12:00:49,091]Error downloading <GET http://www.sogou.com/link?url=X4Yt6GhHd2qhWnFnUKyJatvCwQrXHcjsGkePbLDZEFMl6bznmZfsJw..>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/tomato/coding/ineyes-crawler/ineyes_crawler/middlewares.py", line 105, in process_request
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 546, in execute_script
+    'args': converted_args})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: {"errorMessage":"null is not an object (evaluating 'document.body.scrollHeight')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"124","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:61152","User-Agent":"Python http auth"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"window.scrollTo(0,document.body.scrollHeight)\", \"sessionId\": \"e238c5f0-41f3-11e8-a09f-4f4b49d61d5f\", \"args\": []}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/e238c5f0-41f3-11e8-a09f-4f4b49d61d5f/execute"}}
+Screenshot: available via screen
+
+[INFO][2018-04-17 12:00:50,581]Crawled 30 pages (at 5 pages/min), scraped 14 items (at 0 items/min)
+[INFO][2018-04-17 12:02:39,635]Crawled 41 pages (at 11 pages/min), scraped 16 items (at 2 items/min)
+[INFO][2018-04-17 12:05:10,579]Crawled 57 pages (at 16 pages/min), scraped 24 items (at 8 items/min)
+[ERROR][2018-04-17 12:06:51,849]Error downloading <GET http://www.sogou.com/link?url=LeoKdSZoUyCfe5wQ0mGrQ2kC0nP7PAaeEMxrIPg75NTpAb6J4mCeDTPxnNtvE8Yj>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/tomato/coding/ineyes-crawler/ineyes_crawler/middlewares.py", line 105, in process_request
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 546, in execute_script
+    'args': converted_args})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: {"errorMessage":"null is not an object (evaluating 'document.body.scrollHeight')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"124","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:50757","User-Agent":"Python http auth"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"window.scrollTo(0,document.body.scrollHeight)\", \"sessionId\": \"8ef97960-41f4-11e8-94ce-41c0f81d0098\", \"args\": []}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/8ef97960-41f4-11e8-94ce-41c0f81d0098/execute"}}
+Screenshot: available via screen
+
+[ERROR][2018-04-17 12:06:51,864]Error downloading <GET http://www.sogou.com/link?url=6IqLFeTuIyg9UgKPzXC6fxJFPIaIIpgD6C38rwr3K3A2qAO8uX9cDTCQgRaD0cA1>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/tomato/coding/ineyes-crawler/ineyes_crawler/middlewares.py", line 105, in process_request
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 546, in execute_script
+    'args': converted_args})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: {"errorMessage":"null is not an object (evaluating 'document.body.scrollHeight')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"124","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:50827","User-Agent":"Python http auth"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"window.scrollTo(0,document.body.scrollHeight)\", \"sessionId\": \"906f9ea0-41f4-11e8-a5d0-7b4d5aa40b93\", \"args\": []}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/906f9ea0-41f4-11e8-a5d0-7b4d5aa40b93/execute"}}
+Screenshot: available via screen
+
+[INFO][2018-04-17 12:06:51,865]Crawled 65 pages (at 8 pages/min), scraped 33 items (at 9 items/min)
+[ERROR][2018-04-17 12:07:27,422]Error downloading <GET http://www.sogou.com/link?url=58p16RfDRLtunMUZHwdsdCR44gNwLxairm7mTA61o7Cid07NCAc8Cs_fE_qQkO2P>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/tomato/coding/ineyes-crawler/ineyes_crawler/middlewares.py", line 105, in process_request
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 546, in execute_script
+    'args': converted_args})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: {"errorMessage":"null is not an object (evaluating 'document.body.scrollHeight')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"124","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:51979","User-Agent":"Python http auth"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"window.scrollTo(0,document.body.scrollHeight)\", \"sessionId\": \"af396500-41f4-11e8-b3c8-1d9dfafbab91\", \"args\": []}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/af396500-41f4-11e8-b3c8-1d9dfafbab91/execute"}}
+Screenshot: available via screen
+
+[INFO][2018-04-17 12:08:26,934]Crawled 73 pages (at 8 pages/min), scraped 46 items (at 13 items/min)
+[ERROR][2018-04-17 12:10:08,282]Error downloading <GET http://www.sogou.com/link?url=X4Yt6GhHd2qhWnFnUKyJaugt_K8K9ytwu5c87JAQq8HE576vhycQnA..>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/tomato/coding/ineyes-crawler/ineyes_crawler/middlewares.py", line 105, in process_request
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 546, in execute_script
+    'args': converted_args})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: {"errorMessage":"null is not an object (evaluating 'document.body.scrollHeight')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"124","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:55306","User-Agent":"Python http auth"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"window.scrollTo(0,document.body.scrollHeight)\", \"sessionId\": \"0086fe40-41f5-11e8-9354-1b3a5f6cb5f1\", \"args\": []}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/0086fe40-41f5-11e8-9354-1b3a5f6cb5f1/execute"}}
+Screenshot: available via screen
+
+[INFO][2018-04-17 12:10:08,331]Crawled 84 pages (at 11 pages/min), scraped 49 items (at 3 items/min)
+[INFO][2018-04-17 12:11:20,728]Crawled 91 pages (at 7 pages/min), scraped 58 items (at 9 items/min)
+[INFO][2018-04-17 12:13:12,415]Crawled 102 pages (at 11 pages/min), scraped 66 items (at 8 items/min)
+[INFO][2018-04-17 12:14:19,594]Crawled 108 pages (at 6 pages/min), scraped 75 items (at 9 items/min)
+[INFO][2018-04-17 12:15:18,829]Crawled 111 pages (at 3 pages/min), scraped 81 items (at 6 items/min)
+[INFO][2018-04-17 12:16:53,890]Crawled 117 pages (at 6 pages/min), scraped 84 items (at 3 items/min)
+[INFO][2018-04-17 12:18:02,301]Crawled 124 pages (at 7 pages/min), scraped 93 items (at 9 items/min)
+[ERROR][2018-04-17 12:18:40,144]Error downloading <GET http://www.sogou.com/link?url=6IqLFeTuIyg9UgKPzXC6fxJFPIaIIpgDBgI_nE17_01-HWk9qoX7EKgmjzc-n5e7>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/tomato/coding/ineyes-crawler/ineyes_crawler/middlewares.py", line 105, in process_request
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 546, in execute_script
+    'args': converted_args})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: {"errorMessage":"null is not an object (evaluating 'document.body.scrollHeight')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"124","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:55778","User-Agent":"Python http auth"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"window.scrollTo(0,document.body.scrollHeight)\", \"sessionId\": \"52f24710-41f6-11e8-88e9-19315d0f9116\", \"args\": []}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/52f24710-41f6-11e8-88e9-19315d0f9116/execute"}}
+Screenshot: available via screen
+
+[ERROR][2018-04-17 12:18:40,146]Error downloading <GET http://www.sogou.com/link?url=a8xlm0X2uveManQZ491jLIg9cqvSxiN0PeZqTc5ERnNLN70zZI7zQyjP0LPFsqb-GRoegBaEuyTfe5cq6XSxZbtLWwNjRQrp>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/tomato/coding/ineyes-crawler/ineyes_crawler/middlewares.py", line 105, in process_request
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 546, in execute_script
+    'args': converted_args})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: {"errorMessage":"null is not an object (evaluating 'document.body.scrollHeight')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"124","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:55835","User-Agent":"Python http auth"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"window.scrollTo(0,document.body.scrollHeight)\", \"sessionId\": \"547a94c0-41f6-11e8-8a3c-c3ff7435d4db\", \"args\": []}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/547a94c0-41f6-11e8-8a3c-c3ff7435d4db/execute"}}
+Screenshot: available via screen
+
+[ERROR][2018-04-17 12:19:10,151]Error downloading <GET http://www.sogou.com/link?url=58p16RfDRLtunMUZHwdsdCR44gNwLxaivQsTFZ4Asg5yWST2fzyWjs_fE_qQkO2P>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/tomato/coding/ineyes-crawler/ineyes_crawler/middlewares.py", line 105, in process_request
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 546, in execute_script
+    'args': converted_args})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: {"errorMessage":"null is not an object (evaluating 'document.body.scrollHeight')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"124","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:56399","User-Agent":"Python http auth"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"window.scrollTo(0,document.body.scrollHeight)\", \"sessionId\": \"620fe810-41f6-11e8-b12c-0172e21beb22\", \"args\": []}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/620fe810-41f6-11e8-b12c-0172e21beb22/execute"}}
+Screenshot: available via screen
+
+[INFO][2018-04-17 12:19:10,154]Crawled 130 pages (at 6 pages/min), scraped 98 items (at 5 items/min)
+[ERROR][2018-04-17 12:19:45,042]Error downloading <GET http://www.sogou.com/link?url=6IqLFeTuIyg9UgKPzXC6fxJFPIaIIpgDDlvvk5dZqIgyEwKC9Lu6ZLv1WvByvfbu>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/tomato/coding/ineyes-crawler/ineyes_crawler/middlewares.py", line 105, in process_request
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 546, in execute_script
+    'args': converted_args})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: {"errorMessage":"null is not an object (evaluating 'document.body.scrollHeight')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"124","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:57563","User-Agent":"Python http auth"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"window.scrollTo(0,document.body.scrollHeight)\", \"sessionId\": \"79d03a90-41f6-11e8-a70b-df7530492565\", \"args\": []}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/79d03a90-41f6-11e8-a70b-df7530492565/execute"}}
+Screenshot: available via screen
+
+[INFO][2018-04-17 12:20:27,607]Crawled 138 pages (at 8 pages/min), scraped 100 items (at 2 items/min)
+[INFO][2018-04-17 12:21:43,566]Crawled 146 pages (at 8 pages/min), scraped 106 items (at 6 items/min)
+[INFO][2018-04-17 12:23:21,968]Crawled 156 pages (at 10 pages/min), scraped 118 items (at 12 items/min)
+[INFO][2018-04-17 12:25:05,549]Crawled 165 pages (at 9 pages/min), scraped 122 items (at 4 items/min)
+[ERROR][2018-04-17 12:25:47,328]Error downloading <GET http://www.sogou.com/link?url=6IqLFeTuIyg9UgKPzXC6fxJFPIaIIpgDDlvvk5dZqIhWBo1MTbnHtX3zGblMuj8I>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/tomato/coding/ineyes-crawler/ineyes_crawler/middlewares.py", line 105, in process_request
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 546, in execute_script
+    'args': converted_args})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: {"errorMessage":"null is not an object (evaluating 'document.body.scrollHeight')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"124","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:50250","User-Agent":"Python http auth"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"window.scrollTo(0,document.body.scrollHeight)\", \"sessionId\": \"3ee25cf0-41f7-11e8-b9e2-df915e4b12c5\", \"args\": []}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/3ee25cf0-41f7-11e8-b9e2-df915e4b12c5/execute"}}
+Screenshot: available via screen
+
+[INFO][2018-04-17 12:26:16,046]Crawled 172 pages (at 7 pages/min), scraped 131 items (at 9 items/min)
+[INFO][2018-04-17 12:27:00,204]Crawled 176 pages (at 4 pages/min), scraped 137 items (at 6 items/min)
+[INFO][2018-04-17 12:28:06,662]Crawled 183 pages (at 7 pages/min), scraped 144 items (at 7 items/min)
+[INFO][2018-04-17 12:29:31,258]Crawled 192 pages (at 9 pages/min), scraped 150 items (at 6 items/min)
+[INFO][2018-04-17 12:30:10,964]Crawled 196 pages (at 4 pages/min), scraped 153 items (at 3 items/min)
+[INFO][2018-04-17 12:31:07,275]Crawled 202 pages (at 6 pages/min), scraped 160 items (at 7 items/min)
+[INFO][2018-04-17 12:32:33,462]Crawled 208 pages (at 6 pages/min), scraped 166 items (at 6 items/min)
+[INFO][2018-04-17 12:33:01,322]Crawled 211 pages (at 3 pages/min), scraped 169 items (at 3 items/min)
+[ERROR][2018-04-17 12:33:36,570]Error downloading <GET http://www.sogou.com/link?url=LeoKdSZoUyCnCeGiJ-2rmGkC0nP7PAaeK83zE2qbeYDgCGQP0W061pcAIbzTPNh-reaVHN88tHY.>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/tomato/coding/ineyes-crawler/ineyes_crawler/middlewares.py", line 105, in process_request
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 546, in execute_script
+    'args': converted_args})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: {"errorMessage":"null is not an object (evaluating 'document.body.scrollHeight')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"124","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:60058","User-Agent":"Python http auth"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"window.scrollTo(0,document.body.scrollHeight)\", \"sessionId\": \"67d8dac0-41f8-11e8-a1b4-affa625524a8\", \"args\": []}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/67d8dac0-41f8-11e8-a1b4-affa625524a8/execute"}}
+Screenshot: available via screen
+
+[INFO][2018-04-17 12:34:40,177]Crawled 219 pages (at 8 pages/min), scraped 174 items (at 5 items/min)
+[INFO][2018-04-17 12:37:07,424]Crawled 230 pages (at 11 pages/min), scraped 181 items (at 7 items/min)
+[INFO][2018-04-17 12:38:05,777]Crawled 236 pages (at 6 pages/min), scraped 187 items (at 6 items/min)
+[ERROR][2018-04-17 12:39:20,721]Error downloading <GET http://www.sogou.com/link?url=LeoKdSZoUyCnCeGiJ-2rmGkC0nP7PAae1iHL59ybHWSaMkfXGbcRW5cAIbzTPNh-reaVHN88tHY.>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/tomato/coding/ineyes-crawler/ineyes_crawler/middlewares.py", line 105, in process_request
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 546, in execute_script
+    'args': converted_args})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: {"errorMessage":"null is not an object (evaluating 'document.body.scrollHeight')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"124","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:50074","User-Agent":"Python http auth"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"window.scrollTo(0,document.body.scrollHeight)\", \"sessionId\": \"2a0d58a0-41f9-11e8-9ae6-5f28369440ca\", \"args\": []}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/2a0d58a0-41f9-11e8-9ae6-5f28369440ca/execute"}}
+Screenshot: available via screen
+
+[INFO][2018-04-17 12:39:49,038]Crawled 244 pages (at 8 pages/min), scraped 196 items (at 9 items/min)
+[ERROR][2018-04-17 12:40:22,284]Error downloading <GET http://www.sogou.com/link?url=6IqLFeTuIyg9UgKPzXC6fxJFPIaIIpgDDlvvk5dZqIjq9lx4FYx9LSQl64oDFPFr>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/tomato/coding/ineyes-crawler/ineyes_crawler/middlewares.py", line 105, in process_request
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 546, in execute_script
+    'args': converted_args})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: {"errorMessage":"null is not an object (evaluating 'document.body.scrollHeight')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"124","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:51407","User-Agent":"Python http auth"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"window.scrollTo(0,document.body.scrollHeight)\", \"sessionId\": \"56d0d970-41f9-11e8-b8af-dbc1b035ffac\", \"args\": []}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/56d0d970-41f9-11e8-b8af-dbc1b035ffac/execute"}}
+Screenshot: available via screen
+
+[INFO][2018-04-17 12:41:52,593]Crawled 258 pages (at 14 pages/min), scraped 203 items (at 7 items/min)
+[ERROR][2018-04-17 12:41:52,600]Error downloading <GET http://www.sogou.com/link?url=6IqLFeTuIyg9UgKPzXC6fxJFPIaIIpgDDlvvk5dZqIgjXOtqQbRjiI1fBddP6zYD>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/tomato/coding/ineyes-crawler/ineyes_crawler/middlewares.py", line 105, in process_request
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 546, in execute_script
+    'args': converted_args})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: {"errorMessage":"null is not an object (evaluating 'document.body.scrollHeight')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"124","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:53099","User-Agent":"Python http auth"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"window.scrollTo(0,document.body.scrollHeight)\", \"sessionId\": \"838a4820-41f9-11e8-ade9-abdb576148aa\", \"args\": []}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/838a4820-41f9-11e8-ade9-abdb576148aa/execute"}}
+Screenshot: available via screen
+
+[INFO][2018-04-17 12:44:52,424]Crawled 269 pages (at 11 pages/min), scraped 209 items (at 6 items/min)
+[INFO][2018-04-17 12:47:00,842]Crawled 281 pages (at 12 pages/min), scraped 224 items (at 15 items/min)
+[INFO][2018-04-17 12:48:45,388]Crawled 289 pages (at 8 pages/min), scraped 232 items (at 8 items/min)
+[INFO][2018-04-17 12:50:43,118]Crawled 303 pages (at 14 pages/min), scraped 244 items (at 12 items/min)
+[ERROR][2018-04-17 12:52:27,545]Error downloading <GET http://www.sogou.com/link?url=LeoKdSZoUyCnCeGiJ-2rmGkC0nP7PAaeXtiRRuamHKWPWL9KJ09xS5cAIbzTPNh-reaVHN88tHY.>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/tomato/coding/ineyes-crawler/ineyes_crawler/middlewares.py", line 105, in process_request
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 546, in execute_script
+    'args': converted_args})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: {"errorMessage":"null is not an object (evaluating 'document.body.scrollHeight')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"124","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:64330","User-Agent":"Python http auth"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"window.scrollTo(0,document.body.scrollHeight)\", \"sessionId\": \"0289eb70-41fb-11e8-90c7-eb8801e1ba34\", \"args\": []}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/0289eb70-41fb-11e8-90c7-eb8801e1ba34/execute"}}
+Screenshot: available via screen
+
+[INFO][2018-04-17 12:52:27,546]Crawled 313 pages (at 10 pages/min), scraped 254 items (at 10 items/min)
+[INFO][2018-04-17 12:53:07,447]Crawled 317 pages (at 4 pages/min), scraped 259 items (at 5 items/min)
+[INFO][2018-04-17 12:54:23,132]Crawled 324 pages (at 7 pages/min), scraped 263 items (at 4 items/min)
+[ERROR][2018-04-17 12:55:04,787]Error downloading <GET http://www.sogou.com/link?url=6IqLFeTuIyg9UgKPzXC6fxJFPIaIIpgDDlvvk5dZqIixmnT8Cc32k83k4keqis0B>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/tomato/coding/ineyes-crawler/ineyes_crawler/middlewares.py", line 105, in process_request
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 546, in execute_script
+    'args': converted_args})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: {"errorMessage":"null is not an object (evaluating 'document.body.scrollHeight')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"124","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:50697","User-Agent":"Python http auth"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"window.scrollTo(0,document.body.scrollHeight)\", \"sessionId\": \"57fe23f0-41fb-11e8-be21-8b12b365aa24\", \"args\": []}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/57fe23f0-41fb-11e8-be21-8b12b365aa24/execute"}}
+Screenshot: available via screen
+
+[INFO][2018-04-17 12:55:58,894]Crawled 334 pages (at 10 pages/min), scraped 271 items (at 8 items/min)
+[INFO][2018-04-17 12:57:12,533]Crawled 343 pages (at 9 pages/min), scraped 279 items (at 8 items/min)
